@@ -17,7 +17,8 @@ In order to run a training session, compile the virtual camera application befor
 
 ```
 $ cd virtualcamera/
-$ gcc -Wall -lm -lstdc++ -lopencv_core -lopencv_imgproc -lopencv_imgcodecs virtualcamera.cpp -o virtualcamera
+#$ gcc -Wall -lm -lstdc++ -lopencv_core -lopencv_imgproc -lopencv_imgcodecs virtualcamera.cpp -o virtualcamera
+$ g++ -Wall -lm -lstdc++ -lopencv_core -lopencv_imgproc -lopencv_imgcodecs virtualcamera.cpp -o virtualcamera  `pkg-config opencv --cflags --libs`
 $ cd ..
 $ python hdrcnn_training.py
 ```
